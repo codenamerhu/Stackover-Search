@@ -11,7 +11,7 @@ class APIClient : APIClientProtocol {
     
     let urlSession = URLSession.shared
     
-    func get(params: [String], urlString: String, completion: @escaping (Questions?, Error?) -> Void) {
+    func get(query: String, urlString: String, completion: @escaping (Questions?, Error?) -> Void) {
         
         var urlBuilder = URLComponents(string: urlString)
         urlBuilder?.queryItems = [
