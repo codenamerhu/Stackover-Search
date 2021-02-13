@@ -10,6 +10,7 @@ import Foundation
 class APIClient : APIClientProtocol {
     
     let urlSession = URLSession.shared
+    public static let shared = APIClient()
     
     private let jsonDecoder: JSONDecoder = {
         let jsonDecoder = JSONDecoder()
@@ -27,6 +28,7 @@ class APIClient : APIClientProtocol {
         var urlBuilder = URLComponents(string: urlString)
         urlBuilder?.queryItems = [
             URLQueryItem(name: "pagesize", value: "20"),
+            URLQueryItem(name: "sort", value: "activity"),
             URLQueryItem(name: "order", value: "desc"),
             URLQueryItem(name: "tagged", value: tag),
             URLQueryItem(name: "site", value: "stackoverflow"),
@@ -55,7 +57,9 @@ class APIClient : APIClientProtocol {
             
             do {
                 let questions   = try jsonDecoder.decode(Questions.self, from: data)
-                print("questions are \(questions)")
+                DispatchQueue.main.async {
+                    completion(questions, nil)
+                }
             } catch {
                 print(error.localizedDescription)
             }

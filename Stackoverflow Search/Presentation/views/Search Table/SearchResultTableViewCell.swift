@@ -9,6 +9,7 @@ import UIKit
 
 class SearchResultTableViewCell: UITableViewCell {
 
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
