@@ -9,23 +9,27 @@
 /* Begin PBXBuildFile section */
 		CEAE6F3325D8222800A8EFC0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAE6F3225D8222800A8EFC0 /* AppDelegate.swift */; };
 		CEAE6F3525D8222800A8EFC0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAE6F3425D8222800A8EFC0 /* SceneDelegate.swift */; };
-		CEAE6F3725D8222800A8EFC0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAE6F3625D8222800A8EFC0 /* ViewController.swift */; };
 		CEAE6F3A25D8222800A8EFC0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEAE6F3825D8222800A8EFC0 /* Main.storyboard */; };
 		CEAE6F3D25D8222800A8EFC0 /* Stackoverflow_Search.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CEAE6F3B25D8222800A8EFC0 /* Stackoverflow_Search.xcdatamodeld */; };
 		CEAE6F3F25D8222F00A8EFC0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEAE6F3E25D8222F00A8EFC0 /* Assets.xcassets */; };
 		CEAE6F4225D8222F00A8EFC0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEAE6F4025D8222F00A8EFC0 /* LaunchScreen.storyboard */; };
+		CEAE6F4F25D8261A00A8EFC0 /* SearchViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAE6F4E25D8261A00A8EFC0 /* SearchViewViewController.swift */; };
+		CEAE6F5B25D826B500A8EFC0 /* SearchResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAE6F5925D826B500A8EFC0 /* SearchResultTableViewCell.swift */; };
+		CEAE6F5C25D826B500A8EFC0 /* SearchResultTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEAE6F5A25D826B500A8EFC0 /* SearchResultTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CEAE6F2F25D8222800A8EFC0 /* Stackoverflow Search.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Stackoverflow Search.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEAE6F3225D8222800A8EFC0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEAE6F3425D8222800A8EFC0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CEAE6F3625D8222800A8EFC0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CEAE6F3925D8222800A8EFC0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CEAE6F3C25D8222800A8EFC0 /* Stackoverflow_Search.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Stackoverflow_Search.xcdatamodel; sourceTree = "<group>"; };
 		CEAE6F3E25D8222F00A8EFC0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CEAE6F4125D8222F00A8EFC0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CEAE6F4325D8222F00A8EFC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CEAE6F4E25D8261A00A8EFC0 /* SearchViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewViewController.swift; sourceTree = "<group>"; };
+		CEAE6F5925D826B500A8EFC0 /* SearchResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultTableViewCell.swift; sourceTree = "<group>"; };
+		CEAE6F5A25D826B500A8EFC0 /* SearchResultTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchResultTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,9 +62,9 @@
 		CEAE6F3125D8222800A8EFC0 /* Stackoverflow Search */ = {
 			isa = PBXGroup;
 			children = (
+				CEAE6F4A25D8246300A8EFC0 /* Presentation */,
 				CEAE6F3225D8222800A8EFC0 /* AppDelegate.swift */,
 				CEAE6F3425D8222800A8EFC0 /* SceneDelegate.swift */,
-				CEAE6F3625D8222800A8EFC0 /* ViewController.swift */,
 				CEAE6F3825D8222800A8EFC0 /* Main.storyboard */,
 				CEAE6F3E25D8222F00A8EFC0 /* Assets.xcassets */,
 				CEAE6F4025D8222F00A8EFC0 /* LaunchScreen.storyboard */,
@@ -68,6 +72,32 @@
 				CEAE6F3B25D8222800A8EFC0 /* Stackoverflow_Search.xcdatamodeld */,
 			);
 			path = "Stackoverflow Search";
+			sourceTree = "<group>";
+		};
+		CEAE6F4A25D8246300A8EFC0 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				CEAE6F4D25D825E700A8EFC0 /* views */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		CEAE6F4D25D825E700A8EFC0 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				CEAE6F5225D8262800A8EFC0 /* Search Table */,
+				CEAE6F4E25D8261A00A8EFC0 /* SearchViewViewController.swift */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		CEAE6F5225D8262800A8EFC0 /* Search Table */ = {
+			isa = PBXGroup;
+			children = (
+				CEAE6F5925D826B500A8EFC0 /* SearchResultTableViewCell.swift */,
+				CEAE6F5A25D826B500A8EFC0 /* SearchResultTableViewCell.xib */,
+			);
+			path = "Search Table";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -129,6 +159,7 @@
 			files = (
 				CEAE6F4225D8222F00A8EFC0 /* LaunchScreen.storyboard in Resources */,
 				CEAE6F3F25D8222F00A8EFC0 /* Assets.xcassets in Resources */,
+				CEAE6F5C25D826B500A8EFC0 /* SearchResultTableViewCell.xib in Resources */,
 				CEAE6F3A25D8222800A8EFC0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -141,7 +172,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEAE6F3D25D8222800A8EFC0 /* Stackoverflow_Search.xcdatamodeld in Sources */,
-				CEAE6F3725D8222800A8EFC0 /* ViewController.swift in Sources */,
+				CEAE6F5B25D826B500A8EFC0 /* SearchResultTableViewCell.swift in Sources */,
+				CEAE6F4F25D8261A00A8EFC0 /* SearchViewViewController.swift in Sources */,
 				CEAE6F3325D8222800A8EFC0 /* AppDelegate.swift in Sources */,
 				CEAE6F3525D8222800A8EFC0 /* SceneDelegate.swift in Sources */,
 			);
