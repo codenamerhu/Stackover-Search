@@ -11,8 +11,4 @@ struct Questions : Codable {
     
     let items: [Items]?
     
-    /*
-    enum CodingKeys: String, CodingKey {
-        case items = "items"
-    } */
 }

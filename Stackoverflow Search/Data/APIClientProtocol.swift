@@ -9,5 +9,5 @@ import Foundation
 
 protocol APIClientProtocol {
     
-    func get(query: String, urlString: String, completion: @escaping (Questions?, Error?) -> Void )
+    func get(tag: String, urlString: String, completion: @escaping (Questions, Error?) -> Void )
 }

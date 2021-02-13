@@ -10,10 +10,16 @@ import Foundation
 class SearchViewModel {
     
     var questions: Questions?
+    let apiClient = APIClient()
     
-    func seachQuestion(urlString: String?, query: String? ) {
-        guard let query = query, !query.isEmpty else {
+    func seachQuestion(urlString: String, tag: String? ) {
+        
+        guard let tag = tag, !tag.isEmpty else {
             return
         }
+        
+        apiClient.get(tag: tag, urlString: urlString, completion: {(questions, error) in
+            
+        })
     }
 }
