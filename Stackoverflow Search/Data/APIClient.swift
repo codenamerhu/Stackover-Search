@@ -26,7 +26,7 @@ class APIClient : APIClientProtocol {
         
         urlSession.dataTask(with: request) { (data, response, error) in
             
-        }
+        } .resume()
         
     }
     
