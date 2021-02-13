@@ -49,6 +49,30 @@ extension SearchViewModel : UITableViewDataSource {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "search_result_cell", for: indexPath) as! SearchResultTableViewCell
         
+        cell.title.text = questions.items?[indexPath.row].title
+        
+        if let username = questions.items?[indexPath.row].owner?.display_name {
+            cell.askedBy.text = "asked by " + username
+        }
+        
+        if let score = questions.items?[indexPath.row].score {
+            cell.votedNumberLabel.text = String(score) + " Votes"
+        }
+        
+        
+        
+        if let views = questions.items?[indexPath.row].view_count {
+            cell.viewedNumberlabel.text = String(views) + " Views"
+        }
+        
+        if let _ = questions.items?[indexPath.row].accepted_answer_id {
+            cell.tileLeadingConstraint.constant = 30
+            cell.askedByLeadingConstraint.constant = 30
+            cell.acceptedImage.isHidden = false
+        }
+        
+        
+        
         return cell
     }
 }

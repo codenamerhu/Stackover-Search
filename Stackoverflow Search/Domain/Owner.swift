@@ -14,7 +14,4 @@ struct Owner: Codable {
     let user_type: String?
     let profile_image: String?
     let display_name: String?
-    let link: String?
-    let title: String?
-    let body: String?
 }

@@ -18,4 +18,9 @@ struct Items : Codable {
     let creation_date: Int?
     let last_edit_date: Int?
     let question_id: Int?
+    let content_license: String?
+    let link: String?
+    let title: String?
+    let body: String?
+    let accepted_answer_id: Int?
 }

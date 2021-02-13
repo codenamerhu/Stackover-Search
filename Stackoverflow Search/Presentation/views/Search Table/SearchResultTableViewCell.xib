@@ -83,6 +83,16 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="acceptedImage" destination="BH2-ak-kky" id="sVA-Tx-hRh"/>
+                <outlet property="answereeNumberLable" destination="e0w-ac-5Yz" id="OhY-P0-RtU"/>
+                <outlet property="askedBy" destination="NlT-BG-czg" id="xNL-qC-xTM"/>
+                <outlet property="askedByLeadingConstraint" destination="Scn-1K-l2p" id="T14-Xm-aKi"/>
+                <outlet property="tileLeadingConstraint" destination="clV-m6-zOB" id="nJc-0J-bKh"/>
+                <outlet property="title" destination="4lZ-Nc-ZN6" id="2pD-TR-5SU"/>
+                <outlet property="viewedNumberlabel" destination="z89-Io-doO" id="MWr-wz-bgv"/>
+                <outlet property="votedNumberLabel" destination="QGX-Qn-RPk" id="njC-Wa-NqX"/>
+            </connections>
             <point key="canvasLocation" x="220.28985507246378" y="121.875"/>
         </tableViewCell>
     </objects>
