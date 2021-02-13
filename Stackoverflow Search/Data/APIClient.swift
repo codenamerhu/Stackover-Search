@@ -7,7 +7,29 @@
 
 import Foundation
 
-class APIClient {
+class APIClient : APIClientProtocol {
+    
+    let urlSession = URLSession.shared
+    
+    func get(params: [String], urlString: String, completion: @escaping (Questions?, Error?) -> Void) {
+        
+        var urlBuilder = URLComponents(string: urlString)
+        urlBuilder?.queryItems = [
+        ]
+        
+        guard let url = urlBuilder?.url else {
+            return
+        }
+
+        var request = URLRequest(url: url)
+        request.httpMethod = "GET"
+        
+        urlSession.dataTask(with: request) { (data, response, error) in
+            
+        }
+        
+    }
+    
     
     
     

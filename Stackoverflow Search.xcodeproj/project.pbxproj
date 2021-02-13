@@ -22,6 +22,7 @@
 		CEAE6F6D25D845BB00A8EFC0 /* Questions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAE6F6C25D845BB00A8EFC0 /* Questions.swift */; };
 		CEAE6F7125D8462000A8EFC0 /* ResultItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAE6F7025D8462000A8EFC0 /* ResultItems.swift */; };
 		CEAE6F7525D8478F00A8EFC0 /* Owner.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAE6F7425D8478F00A8EFC0 /* Owner.swift */; };
+		CEBC81B625D859EC0051F2CB /* Contants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBC81B525D859EC0051F2CB /* Contants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		CEAE6F6C25D845BB00A8EFC0 /* Questions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Questions.swift; sourceTree = "<group>"; };
 		CEAE6F7025D8462000A8EFC0 /* ResultItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultItems.swift; sourceTree = "<group>"; };
 		CEAE6F7425D8478F00A8EFC0 /* Owner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Owner.swift; sourceTree = "<group>"; };
+		CEBC81B525D859EC0051F2CB /* Contants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 		CEAE6F3125D8222800A8EFC0 /* Stackoverflow Search */ = {
 			isa = PBXGroup;
 			children = (
+				CEBC81B425D859D80051F2CB /* Utils */,
 				CEAE6F6425D8432A00A8EFC0 /* Data */,
 				CEAE6F6325D842FE00A8EFC0 /* Domain */,
 				CEAE6F4A25D8246300A8EFC0 /* Presentation */,
@@ -140,6 +143,14 @@
 				CEAE6F6925D843ED00A8EFC0 /* APIClientProtocol.swift */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		CEBC81B425D859D80051F2CB /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				CEBC81B525D859EC0051F2CB /* Contants.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -224,6 +235,7 @@
 				CEAE6F7525D8478F00A8EFC0 /* Owner.swift in Sources */,
 				CEAE6F3325D8222800A8EFC0 /* AppDelegate.swift in Sources */,
 				CEAE6F3525D8222800A8EFC0 /* SceneDelegate.swift in Sources */,
+				CEBC81B625D859EC0051F2CB /* Contants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
