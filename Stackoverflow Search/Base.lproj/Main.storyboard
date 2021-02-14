@@ -33,24 +33,25 @@
                     <navigationItem key="navigationItem" leftItemsSupplementBackButton="YES" id="Yfo-r8-1Yh"/>
                     <connections>
                         <outlet property="tableView" destination="eXw-vr-x8p" id="wf4-ey-T7E"/>
+                        <segue destination="u7Z-DY-TVj" kind="show" identifier="viewDeatilSegue" id="xfk-2s-TWr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="728" y="94"/>
         </scene>
-        <!--View Controller-->
+        <!--Question Detail View View Controller-->
         <scene sceneID="cpm-xO-LUf">
             <objects>
-                <viewController id="u7Z-DY-TVj" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="detailView" id="u7Z-DY-TVj" customClass="QuestionDetailViewViewController" customModule="Stackoverflow_Search" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="L64-An-q37">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aQp-rL-Qb7" userLabel="top bar">
-                                <rect key="frame" x="0.0" y="44" width="414" height="55"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="55"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Xcode 6 strange bug: Unknow class in interface builder file" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wjz-XW-7mp">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Xcode 6 strange bug: Unknow class in interface builder file" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wjz-XW-7mp">
                                         <rect key="frame" x="15" y="10" width="306.5" height="41"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                         <color key="textColor" red="0.44705882352941173" green="0.44705882352941173" blue="0.44705882352941173" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
@@ -132,27 +133,22 @@
                                 </constraints>
                             </view>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xur-Eg-Sgl">
-                                <rect key="frame" x="0.0" y="102" width="414" height="692"/>
+                                <rect key="frame" x="0.0" y="146" width="414" height="604"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1mM-xR-39F" userLabel="content view">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="692"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="604"/>
                                         <subviews>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="cdj-NA-1Xf">
-                                                <rect key="frame" x="15" y="10" width="384" height="672"/>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J2e-ZP-Efv">
+                                                <rect key="frame" x="15" y="0.0" width="384" height="604"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                                <color key="textColor" systemColor="labelColor"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                            </textView>
+                                            </view>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
-                                            <constraint firstItem="cdj-NA-1Xf" firstAttribute="top" secondItem="1mM-xR-39F" secondAttribute="top" constant="10" id="LLj-Aa-Pcp"/>
-                                            <constraint firstItem="cdj-NA-1Xf" firstAttribute="leading" secondItem="1mM-xR-39F" secondAttribute="leading" constant="15" id="MKW-XP-rsM"/>
-                                            <constraint firstAttribute="bottom" secondItem="cdj-NA-1Xf" secondAttribute="bottom" constant="10" id="XsO-xD-3K4"/>
-                                            <constraint firstAttribute="trailing" secondItem="cdj-NA-1Xf" secondAttribute="trailing" constant="15" id="ZhY-Ky-o3a"/>
-                                            <constraint firstAttribute="height" constant="900" id="c1e-bi-Mqx"/>
+                                            <constraint firstItem="J2e-ZP-Efv" firstAttribute="top" secondItem="1mM-xR-39F" secondAttribute="top" id="0wz-V9-zTr"/>
+                                            <constraint firstAttribute="trailing" secondItem="J2e-ZP-Efv" secondAttribute="trailing" constant="15" id="7vh-u2-d8s"/>
+                                            <constraint firstItem="J2e-ZP-Efv" firstAttribute="leading" secondItem="1mM-xR-39F" secondAttribute="leading" constant="15" id="9Lq-EP-2wQ"/>
+                                            <constraint firstAttribute="bottom" secondItem="J2e-ZP-Efv" secondAttribute="bottom" id="l1I-kh-wkl"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -183,7 +179,17 @@
                             <constraint firstItem="aQp-rL-Qb7" firstAttribute="leading" secondItem="ivE-oE-TFL" secondAttribute="leading" id="yNL-cV-SzT"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="Q9v-Wq-dO5"/>
                     <size key="freeformSize" width="414" height="896"/>
+                    <connections>
+                        <outlet property="askedTimeLabel" destination="m7K-Uf-UWe" id="pdv-O7-0Es"/>
+                        <outlet property="bodyView" destination="J2e-ZP-Efv" id="3ZW-Gq-5te"/>
+                        <outlet property="reputationLabel" destination="9HL-Gk-w3m" id="uN0-HC-Ec5"/>
+                        <outlet property="tagsLabel" destination="Swh-f2-KH0" id="u22-4s-ATp"/>
+                        <outlet property="titleLabel" destination="wjz-XW-7mp" id="g03-9r-ZPo"/>
+                        <outlet property="userProfileImage" destination="2dT-ht-0IE" id="yCf-fY-vA5"/>
+                        <outlet property="username" destination="Px7-fF-fqh" id="K4G-Bf-TMD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CC1-Z5-ehD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -209,9 +215,6 @@
         </scene>
     </scenes>
     <resources>
-        <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

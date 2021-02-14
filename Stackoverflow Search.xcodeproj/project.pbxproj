@@ -23,6 +23,7 @@
 		CEAE6F7125D8462000A8EFC0 /* ResultItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAE6F7025D8462000A8EFC0 /* ResultItems.swift */; };
 		CEAE6F7525D8478F00A8EFC0 /* Owner.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAE6F7425D8478F00A8EFC0 /* Owner.swift */; };
 		CEBC81B625D859EC0051F2CB /* Contants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBC81B525D859EC0051F2CB /* Contants.swift */; };
+		CEBC81BA25D89AD60051F2CB /* QuestionDetailViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBC81B925D89AD60051F2CB /* QuestionDetailViewViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		CEAE6F7025D8462000A8EFC0 /* ResultItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultItems.swift; sourceTree = "<group>"; };
 		CEAE6F7425D8478F00A8EFC0 /* Owner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Owner.swift; sourceTree = "<group>"; };
 		CEBC81B525D859EC0051F2CB /* Contants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contants.swift; sourceTree = "<group>"; };
+		CEBC81B925D89AD60051F2CB /* QuestionDetailViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionDetailViewViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 				CEAE6F5E25D8413600A8EFC0 /* view models */,
 				CEAE6F5225D8262800A8EFC0 /* Search Table */,
 				CEAE6F4E25D8261A00A8EFC0 /* SearchViewViewController.swift */,
+				CEBC81B925D89AD60051F2CB /* QuestionDetailViewViewController.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -224,6 +227,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEBC81BA25D89AD60051F2CB /* QuestionDetailViewViewController.swift in Sources */,
 				CEAE6F6D25D845BB00A8EFC0 /* Questions.swift in Sources */,
 				CEAE6F6125D842ED00A8EFC0 /* SearchViewModel.swift in Sources */,
 				CEAE6F6625D8436400A8EFC0 /* APIClient.swift in Sources */,

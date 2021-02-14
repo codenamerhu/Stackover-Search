@@ -10,13 +10,14 @@ import Foundation
 struct Items : Codable {
     
     let owner: Owner?
+    let tags: [String]
     let is_answered: Bool?
     let view_count: Int?
     let answer_count: Int?
     let score: Int?
-    let last_activity_date: Int?
-    let creation_date: Int?
-    let last_edit_date: Int?
+    let last_activity_date: Double?
+    let creation_date: Double?
+    let last_edit_date: Double?
     let question_id: Int?
     let content_license: String?
     let link: String?

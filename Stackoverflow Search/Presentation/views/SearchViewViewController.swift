@@ -11,13 +11,15 @@ class SearchViewViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
 
-    let searchController = UISearchController(searchResultsController: nil)
+    
     var searchViewModel = SearchViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let searchController = UISearchController(searchResultsController: nil)
         navigationItem.searchController = searchController
+        searchController.searchResultsUpdater = searchViewModel
         
         
         tableView.register(UINib(nibName: "SearchResultTableViewCell", bundle: nil), forCellReuseIdentifier: "search_result_cell")
@@ -28,14 +30,23 @@ class SearchViewViewController: UIViewController {
             self?.tableView.reloadData()
             print("hello \(self!.searchViewModel.numberoOfItems())")
         }
-        searchViewModel.seachQuestion(urlString: Constants.baseurl + Constants.apiVersion + "/questions", tag: "swift")
+        
     
         
         tableView.delegate = self
         tableView.dataSource = searchViewModel
         tableView.tableFooterView = UIView()
     }
+    
+    
 
 }
 
-extension SearchViewViewController : UITableViewDelegate { }
+extension SearchViewViewController : UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let detailView = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(identifier: "detailView") as! QuestionDetailViewViewController
+        detailView.question = searchViewModel.questions.items?[indexPath.row]
+        self.navigationController?.pushViewController(detailView, animated: true)
+    }
+}

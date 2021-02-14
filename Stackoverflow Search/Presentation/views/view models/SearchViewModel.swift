@@ -10,6 +10,7 @@ import UIKit
 
 class SearchViewModel : NSObject {
     
+    
     var questions: Questions!
     let apiClient = APIClient()
     var dataChange: (() -> Void)?
@@ -75,4 +76,20 @@ extension SearchViewModel : UITableViewDataSource {
         
         return cell
     }
+}
+
+extension SearchViewModel : UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        
+        if let tag = searchController.searchBar.text {
+            self.seachQuestion(urlString: Constants.baseurl + Constants.apiVersion + "/questions", tag: tag)
+            dataChange?()
+        }
+        
+        
+    }
+}
+
+func replaceSymbol(string: String) -> String {
+    return string.replacingOccurrences(of: " ", with: "%20", options: .literal, range: nil)
 }
