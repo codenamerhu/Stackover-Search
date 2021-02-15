@@ -21,6 +21,8 @@ class SearchResultTableViewCell: UITableViewCell {
     @IBOutlet weak var answereeNumberLable: UILabel!
     @IBOutlet weak var viewedNumberlabel: UILabel!
     
+    var viewModel: SearchViewModel?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -29,12 +31,30 @@ class SearchResultTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
     
-    func configureData(){
+    func configureData(items: Items){
+        title.text = items.title
         
+        if let username = items.owner?.display_name {
+            askedBy.text = "asked by " + username
+        }
+        
+        if let score = items.score {
+            votedNumberLabel.text = String(score) + " Votes"
+        }
+        
+        
+        
+        if let views = items.view_count {
+            viewedNumberlabel.text = String(views) + " Views"
+        }
+        
+        if let _ = items.accepted_answer_id {
+            tileLeadingConstraint.constant = 30
+            askedByLeadingConstraint.constant = 30
+            acceptedImage.isHidden = false
+        }
     }
     
 }

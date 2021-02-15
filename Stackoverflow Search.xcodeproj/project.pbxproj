@@ -24,6 +24,9 @@
 		CEAE6F7525D8478F00A8EFC0 /* Owner.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAE6F7425D8478F00A8EFC0 /* Owner.swift */; };
 		CEBC81B625D859EC0051F2CB /* Contants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBC81B525D859EC0051F2CB /* Contants.swift */; };
 		CEBC81BA25D89AD60051F2CB /* QuestionDetailViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBC81B925D89AD60051F2CB /* QuestionDetailViewViewController.swift */; };
+		CEBC81BD25D9B2EF0051F2CB /* UIColor extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBC81BC25D9B2EF0051F2CB /* UIColor extension.swift */; };
+		CED1F0E225DA5D3C00628A01 /* UIImage extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED1F0E125DA5D3C00628A01 /* UIImage extension.swift */; };
+		CED1F0E625DA5F9B00628A01 /* themestyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED1F0E525DA5F9B00628A01 /* themestyle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +49,9 @@
 		CEAE6F7425D8478F00A8EFC0 /* Owner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Owner.swift; sourceTree = "<group>"; };
 		CEBC81B525D859EC0051F2CB /* Contants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contants.swift; sourceTree = "<group>"; };
 		CEBC81B925D89AD60051F2CB /* QuestionDetailViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionDetailViewViewController.swift; sourceTree = "<group>"; };
+		CEBC81BC25D9B2EF0051F2CB /* UIColor extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor extension.swift"; sourceTree = "<group>"; };
+		CED1F0E125DA5D3C00628A01 /* UIImage extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage extension.swift"; sourceTree = "<group>"; };
+		CED1F0E525DA5F9B00628A01 /* themestyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = themestyle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +102,7 @@
 		CEAE6F4A25D8246300A8EFC0 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				CED1F0E425DA5F7500628A01 /* ThemeStyle */,
 				CEAE6F4D25D825E700A8EFC0 /* views */,
 			);
 			path = Presentation;
@@ -152,8 +159,18 @@
 			isa = PBXGroup;
 			children = (
 				CEBC81B525D859EC0051F2CB /* Contants.swift */,
+				CEBC81BC25D9B2EF0051F2CB /* UIColor extension.swift */,
+				CED1F0E125DA5D3C00628A01 /* UIImage extension.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		CED1F0E425DA5F7500628A01 /* ThemeStyle */ = {
+			isa = PBXGroup;
+			children = (
+				CED1F0E525DA5F9B00628A01 /* themestyle.swift */,
+			);
+			path = ThemeStyle;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,6 +249,7 @@
 				CEAE6F6125D842ED00A8EFC0 /* SearchViewModel.swift in Sources */,
 				CEAE6F6625D8436400A8EFC0 /* APIClient.swift in Sources */,
 				CEAE6F3D25D8222800A8EFC0 /* Stackoverflow_Search.xcdatamodeld in Sources */,
+				CEBC81BD25D9B2EF0051F2CB /* UIColor extension.swift in Sources */,
 				CEAE6F5B25D826B500A8EFC0 /* SearchResultTableViewCell.swift in Sources */,
 				CEAE6F4F25D8261A00A8EFC0 /* SearchViewViewController.swift in Sources */,
 				CEAE6F6A25D843ED00A8EFC0 /* APIClientProtocol.swift in Sources */,
@@ -239,7 +257,9 @@
 				CEAE6F7525D8478F00A8EFC0 /* Owner.swift in Sources */,
 				CEAE6F3325D8222800A8EFC0 /* AppDelegate.swift in Sources */,
 				CEAE6F3525D8222800A8EFC0 /* SceneDelegate.swift in Sources */,
+				CED1F0E225DA5D3C00628A01 /* UIImage extension.swift in Sources */,
 				CEBC81B625D859EC0051F2CB /* Contants.swift in Sources */,
+				CED1F0E625DA5F9B00628A01 /* themestyle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -14,7 +14,6 @@ class APIClient : APIClientProtocol {
     
     private let jsonDecoder: JSONDecoder = {
         let jsonDecoder = JSONDecoder()
-        //.keyDecodingStrategy = .convertFromSnakeCase
         jsonDecoder.dateDecodingStrategy = .iso8601
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-mm-dd"
@@ -61,6 +60,7 @@ class APIClient : APIClientProtocol {
                     completion(questions, nil)
                 }
             } catch {
+                
                 print(error.localizedDescription)
             }
             

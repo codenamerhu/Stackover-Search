@@ -66,11 +66,15 @@
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="wjz-XW-7mp" secondAttribute="trailing" constant="30" id="yhL-1D-bvu"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J2e-ZP-Efv">
+                                <rect key="frame" x="15" y="143" width="384" height="668"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kar-Gj-MIE" userLabel="bottom bar">
                                 <rect key="frame" x="0.0" y="811" width="414" height="85"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PwZ-Mo-9ux">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="20"/>
+                                        <rect key="frame" x="-1" y="0.0" width="416" height="20"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ios, swift, iphone" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Swh-f2-KH0">
                                                 <rect key="frame" x="15" y="0.0" width="82" height="20"/>
@@ -123,59 +127,28 @@
                                 <constraints>
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="cPh-M0-SIy" secondAttribute="trailing" constant="120" id="3dr-uw-kkt"/>
                                     <constraint firstItem="2dT-ht-0IE" firstAttribute="centerY" secondItem="Kar-Gj-MIE" secondAttribute="centerY" id="Gxr-W4-pSk"/>
-                                    <constraint firstItem="PwZ-Mo-9ux" firstAttribute="leading" secondItem="Kar-Gj-MIE" secondAttribute="leading" id="OTY-pG-fiM"/>
+                                    <constraint firstItem="PwZ-Mo-9ux" firstAttribute="leading" secondItem="Kar-Gj-MIE" secondAttribute="leading" constant="-1" id="OTY-pG-fiM"/>
                                     <constraint firstItem="cPh-M0-SIy" firstAttribute="leading" secondItem="2dT-ht-0IE" secondAttribute="trailing" constant="10" id="OvF-wY-xR5"/>
                                     <constraint firstItem="9HL-Gk-w3m" firstAttribute="centerY" secondItem="Kar-Gj-MIE" secondAttribute="centerY" id="Qqx-L4-c19"/>
-                                    <constraint firstAttribute="trailing" secondItem="PwZ-Mo-9ux" secondAttribute="trailing" id="afP-gj-Ry2"/>
+                                    <constraint firstAttribute="trailing" secondItem="PwZ-Mo-9ux" secondAttribute="trailing" constant="-1" id="afP-gj-Ry2"/>
                                     <constraint firstAttribute="height" constant="85" id="bpF-NX-8Tn"/>
                                     <constraint firstItem="2dT-ht-0IE" firstAttribute="leading" secondItem="Kar-Gj-MIE" secondAttribute="leading" constant="15" id="cJR-7u-gxd"/>
                                     <constraint firstItem="PwZ-Mo-9ux" firstAttribute="top" secondItem="Kar-Gj-MIE" secondAttribute="top" id="hpG-Sj-FlL"/>
                                 </constraints>
                             </view>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xur-Eg-Sgl">
-                                <rect key="frame" x="0.0" y="146" width="414" height="604"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1mM-xR-39F" userLabel="content view">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="604"/>
-                                        <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J2e-ZP-Efv">
-                                                <rect key="frame" x="15" y="0.0" width="384" height="604"/>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                            </view>
-                                        </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                        <constraints>
-                                            <constraint firstItem="J2e-ZP-Efv" firstAttribute="top" secondItem="1mM-xR-39F" secondAttribute="top" id="0wz-V9-zTr"/>
-                                            <constraint firstAttribute="trailing" secondItem="J2e-ZP-Efv" secondAttribute="trailing" constant="15" id="7vh-u2-d8s"/>
-                                            <constraint firstItem="J2e-ZP-Efv" firstAttribute="leading" secondItem="1mM-xR-39F" secondAttribute="leading" constant="15" id="9Lq-EP-2wQ"/>
-                                            <constraint firstAttribute="bottom" secondItem="J2e-ZP-Efv" secondAttribute="bottom" id="l1I-kh-wkl"/>
-                                        </constraints>
-                                    </view>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="1mM-xR-39F" firstAttribute="top" secondItem="xur-Eg-Sgl" secondAttribute="top" id="1ZF-WH-2ZA"/>
-                                    <constraint firstAttribute="bottom" secondItem="1mM-xR-39F" secondAttribute="bottom" id="CKN-nA-Y0T"/>
-                                    <constraint firstItem="1mM-xR-39F" firstAttribute="leading" secondItem="xur-Eg-Sgl" secondAttribute="leading" id="NN6-5Z-qgn"/>
-                                    <constraint firstAttribute="trailing" secondItem="1mM-xR-39F" secondAttribute="trailing" id="QuC-oY-uZp"/>
-                                    <constraint firstItem="1mM-xR-39F" firstAttribute="bottom" secondItem="YwN-B6-cHK" secondAttribute="bottom" id="b91-yW-eQJ"/>
-                                </constraints>
-                                <viewLayoutGuide key="contentLayoutGuide" id="7ou-3Z-FM5"/>
-                                <viewLayoutGuide key="frameLayoutGuide" id="YwN-B6-cHK"/>
-                            </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ivE-oE-TFL"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="xur-Eg-Sgl" firstAttribute="centerY" secondItem="L64-An-q37" secondAttribute="centerY" id="0kn-Cm-PfM"/>
-                            <constraint firstItem="xur-Eg-Sgl" firstAttribute="top" secondItem="aQp-rL-Qb7" secondAttribute="bottom" constant="3" id="FzN-Yf-mkb"/>
+                            <constraint firstItem="J2e-ZP-Efv" firstAttribute="leading" secondItem="ivE-oE-TFL" secondAttribute="leading" constant="15" id="Ckj-sB-3qx"/>
+                            <constraint firstItem="ivE-oE-TFL" firstAttribute="trailing" secondItem="J2e-ZP-Efv" secondAttribute="trailing" constant="15" id="I4Y-sq-xFC"/>
                             <constraint firstItem="aQp-rL-Qb7" firstAttribute="trailing" secondItem="ivE-oE-TFL" secondAttribute="trailing" id="K6g-tm-b1I"/>
                             <constraint firstAttribute="bottom" secondItem="Kar-Gj-MIE" secondAttribute="bottom" id="MTy-bS-vK8"/>
+                            <constraint firstItem="J2e-ZP-Efv" firstAttribute="top" secondItem="aQp-rL-Qb7" secondAttribute="bottom" id="N4O-iB-y9M"/>
+                            <constraint firstItem="Kar-Gj-MIE" firstAttribute="top" secondItem="J2e-ZP-Efv" secondAttribute="bottom" id="To6-7e-j7c"/>
                             <constraint firstItem="Kar-Gj-MIE" firstAttribute="trailing" secondItem="ivE-oE-TFL" secondAttribute="trailing" id="V4o-Ml-ZU9"/>
                             <constraint firstItem="Kar-Gj-MIE" firstAttribute="leading" secondItem="ivE-oE-TFL" secondAttribute="leading" id="ZFF-jb-eGJ"/>
-                            <constraint firstItem="1mM-xR-39F" firstAttribute="width" secondItem="L64-An-q37" secondAttribute="width" id="gqX-Ut-eVU"/>
-                            <constraint firstItem="xur-Eg-Sgl" firstAttribute="leading" secondItem="ivE-oE-TFL" secondAttribute="leading" id="lx4-Jq-6t4"/>
                             <constraint firstItem="aQp-rL-Qb7" firstAttribute="top" secondItem="ivE-oE-TFL" secondAttribute="top" id="maN-1b-ZAm"/>
-                            <constraint firstItem="ivE-oE-TFL" firstAttribute="trailing" secondItem="xur-Eg-Sgl" secondAttribute="trailing" id="wkh-rO-OOf"/>
                             <constraint firstItem="aQp-rL-Qb7" firstAttribute="leading" secondItem="ivE-oE-TFL" secondAttribute="leading" id="yNL-cV-SzT"/>
                         </constraints>
                     </view>
@@ -186,6 +159,7 @@
                         <outlet property="bodyView" destination="J2e-ZP-Efv" id="3ZW-Gq-5te"/>
                         <outlet property="reputationLabel" destination="9HL-Gk-w3m" id="uN0-HC-Ec5"/>
                         <outlet property="tagsLabel" destination="Swh-f2-KH0" id="u22-4s-ATp"/>
+                        <outlet property="tagsUIView" destination="PwZ-Mo-9ux" id="AUZ-x6-uIW"/>
                         <outlet property="titleLabel" destination="wjz-XW-7mp" id="g03-9r-ZPo"/>
                         <outlet property="userProfileImage" destination="2dT-ht-0IE" id="yCf-fY-vA5"/>
                         <outlet property="username" destination="Px7-fF-fqh" id="K4G-Bf-TMD"/>

@@ -17,12 +17,25 @@ class QuestionDetailViewViewController: UIViewController, WKUIDelegate {
     @IBOutlet weak var reputationLabel: UILabel!
     @IBOutlet weak var askedTimeLabel: UILabel!
     
+    @IBOutlet weak var tagsUIView: UIView!
+    
     var webView: WKWebView!
     var question: Items?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        statusBarColorChange (view: view, color: customBlue!, textTheme: "light")
+        self.navigationController?.navigationBar.backgroundColor = customBlue
+        
+        connectData()
+        
+        tagsUIView.layer.borderWidth = 1
+        tagsUIView.layer.borderColor = UIColor.lightGray.cgColor
+        setupWebView()
+    }
+    
+    func connectData() {
         titleLabel.text = question?.title
         
         if let tags = question?.tags {
@@ -58,10 +71,6 @@ class QuestionDetailViewViewController: UIViewController, WKUIDelegate {
             print( "asked \(day) \(month) \(year) at \(hour):\(minutes)")
             askedTimeLabel.text = "asked \(day) \(month) \(year) at \(hour):\(minutes)"
         }
-        
-        
-        
-        setupWebView()
     }
     
     func setupWebView() {
@@ -77,20 +86,6 @@ class QuestionDetailViewViewController: UIViewController, WKUIDelegate {
         }
     }
 
-}
-
-extension UIImageView {
-    func load(url: URL) {
-        DispatchQueue.global().async { [weak self] in
-            if let data = try? Data(contentsOf: url) {
-                if let image = UIImage(data: data) {
-                    DispatchQueue.main.async {
-                        self?.image = image
-                    }
-                }
-            }
-        }
-    }
 }
 
 
