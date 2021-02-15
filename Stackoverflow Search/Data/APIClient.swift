@@ -21,15 +21,15 @@ class APIClient : APIClientProtocol {
         return jsonDecoder
     }()
     
-     var pSize = 20
+     var defaultPageSize = 20
     
     func get(tag: String, urlString: String, pageNum: Int, pageSize: Int, completion: @escaping (Questions, Error?) -> Void) {
         
-        pSize += pageSize
+        defaultPageSize += pageSize
         print("page size \(pageSize)")
         var urlBuilder = URLComponents(string: urlString)
         urlBuilder?.queryItems = [
-            URLQueryItem(name: "pagesize", value: String(pSize)),
+            URLQueryItem(name: "pagesize", value: String(defaultPageSize)),
             URLQueryItem(name: "page", value: String(pageNum)),
             URLQueryItem(name: "sort", value: "activity"),
             URLQueryItem(name: "order", value: "desc"),
