@@ -68,6 +68,5 @@ extension SearchViewViewController : UISearchResultsUpdating {
             searchViewModel.searchTag = tag
         }
         
-        
     }
 }
