@@ -11,6 +11,7 @@ class SearchViewViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
 
+    var isDataLoading:Bool=false
     var pageNo:Int=0
     var limit:Int=0
     var offset:Int=0 //pageNo*limit
@@ -77,9 +78,21 @@ extension SearchViewViewController : UITableViewDelegate {
                     print("stretched")
                     self.pageNo = self.pageNo+1
                     self.limit=self.limit + 10
+                    searchViewModel.searchTag = "swift"
                     searchViewModel.pageNum = self.pageNo
                     searchViewModel.pageSize = self.limit
                     tableView.dataSource = searchViewModel
+                    print("here \(searchViewModel.searchTag)")
+                    
+                    if !isDataLoading{
+                        isDataLoading = true
+                        self.pageNo=self.pageNo+1
+                        self.limit=self.limit+10
+                        self.offset=self.limit * self.pageNo
+                        tableView.dataSource = searchViewModel
+                        print("here \(searchViewModel.searchTag)")
+
+                    }
                 }
 
 
