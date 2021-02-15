@@ -39,7 +39,7 @@ class SearchViewModel : NSObject {
     func numberoOfItems() -> Int {
         if let count = questions?.items {
             
-            return pageSize
+            return count.count
         } else {
             return 0
         }
