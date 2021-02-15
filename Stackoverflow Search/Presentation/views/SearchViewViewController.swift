@@ -11,6 +11,11 @@ class SearchViewViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
 
+    var isDataLoading:Bool=false
+    var pageNo:Int=0
+    var limit:Int=0
+    var offset:Int=0 //pageNo*limit
+    var didEndReached:Bool=false
     
     var searchViewModel = SearchViewModel()
     
@@ -59,6 +64,40 @@ extension SearchViewViewController : UITableViewDelegate {
         detailView.question = searchViewModel.questions.items?[indexPath.row]
         self.navigationController?.pushViewController(detailView, animated: true)
     }
+    
+    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+
+            print("scrollViewWillBeginDragging")
+    }
+    
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+
+                print("scrollViewDidEndDragging")
+                if ((tableView.contentOffset.y + tableView.frame.size.height) >= tableView.contentSize.height)
+                {
+                    print("stretched")
+                    self.pageNo = self.pageNo+1
+                    self.limit=self.limit + 10
+                    searchViewModel.searchTag = "swift"
+                    searchViewModel.pageNum = self.pageNo
+                    searchViewModel.pageSize = self.limit
+                    tableView.dataSource = searchViewModel
+                    print("here \(searchViewModel.searchTag)")
+                    
+                    if !isDataLoading{
+                        isDataLoading = true
+                        self.pageNo=self.pageNo+1
+                        self.limit=self.limit+10
+                        self.offset=self.limit * self.pageNo
+                        searchViewModel.searchTag = "swift"
+                        tableView.dataSource = searchViewModel
+                        print("here \(searchViewModel.searchTag)")
+
+                    }
+                }
+
+
+        }
 }
 
 extension SearchViewViewController : UISearchResultsUpdating {

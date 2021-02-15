@@ -13,6 +13,8 @@ class SearchViewModel : NSObject {
     var questions: Questions!
     let apiClient = APIClient()
     var dataChange: (() -> Void)?
+    var pageNum = 1
+    var pageSize = 0
     
     var searchTag: String? {
         didSet {
@@ -27,7 +29,7 @@ class SearchViewModel : NSObject {
             return
         }
         
-        apiClient.get(tag: tag, urlString: urlString, completion: { [self] (questions, error) in
+        apiClient.get(tag: tag, urlString: urlString, pageNum:pageNum, pageSize: pageSize, completion: { [self] (questions, error) in
             
             self.questions = questions
             dataChange?()
@@ -37,7 +39,7 @@ class SearchViewModel : NSObject {
     func numberoOfItems() -> Int {
         if let count = questions?.items {
             
-            return count.count
+            return count.count + pageSize
         } else {
             return 0
         }
