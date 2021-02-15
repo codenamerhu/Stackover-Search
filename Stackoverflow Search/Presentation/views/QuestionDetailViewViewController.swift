@@ -61,7 +61,7 @@ class QuestionDetailViewViewController: UIViewController, WKUIDelegate {
             let date = Date(timeIntervalSince1970: (TimeInterval(creationDate / 1000) ))
             let calendar = Calendar.current
 
-            
+
             let minutes = calendar.component(.minute, from: date)
             let hour = calendar.component(.hour, from: date)
             let day = calendar.component(.day, from: date)

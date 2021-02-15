@@ -10,19 +10,18 @@ import UIKit
 
 class SearchViewModel : NSObject {
     
-    
     var questions: Questions!
     let apiClient = APIClient()
     var dataChange: (() -> Void)?
     
     var searchTag: String? {
         didSet {
-            self.seachQuestion(urlString: Constants.baseurl + Constants.apiVersion + "/questions", tag: searchTag)
+            self.searchQuestion(urlString: Constants.baseurl + Constants.apiVersion + "/questions", tag: searchTag)
             dataChange?()
         }
     }
     
-    func seachQuestion(urlString: String, tag: String? ) {
+    func searchQuestion(urlString: String, tag: String? ) {
         
         guard let tag = tag, !tag.isEmpty else {
             return
@@ -59,7 +58,6 @@ extension SearchViewModel : UITableViewDataSource {
         if let items = questions.items?[indexPath.row] {
             cell.configureData(items: items)
         }
-        
         
         return cell
     }

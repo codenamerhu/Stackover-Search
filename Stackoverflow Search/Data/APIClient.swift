@@ -23,7 +23,6 @@ class APIClient : APIClientProtocol {
     
     func get(tag: String, urlString: String, completion: @escaping (Questions, Error?) -> Void) {
         
-        
         var urlBuilder = URLComponents(string: urlString)
         urlBuilder?.queryItems = [
             URLQueryItem(name: "pagesize", value: "20"),
@@ -37,13 +36,11 @@ class APIClient : APIClientProtocol {
         guard let url = urlBuilder?.url else {
             return
         }
-        print("url \(url)")
 
         var request = URLRequest(url: url)
         request.httpMethod = "GET"
         
         urlSession.dataTask(with: request) { [self] (data, response, error) in
-            
             
             guard error == nil else {
                 // completion
@@ -60,15 +57,10 @@ class APIClient : APIClientProtocol {
                     completion(questions, nil)
                 }
             } catch {
-                
                 print(error.localizedDescription)
             }
             
         } .resume()
-        
     }
-    
-    
-    
-    
+
 }
