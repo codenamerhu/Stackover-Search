@@ -16,6 +16,7 @@ class SearchViewViewController: UIViewController {
     var limit:Int=0
     var offset:Int=0 //pageNo*limit
     var didEndReached:Bool=false
+    var tag = ""
     
     var searchViewModel = SearchViewModel()
     
@@ -72,26 +73,15 @@ extension SearchViewViewController : UITableViewDelegate {
     
     func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
 
-                print("scrollViewDidEndDragging")
                 if ((tableView.contentOffset.y + tableView.frame.size.height) >= tableView.contentSize.height)
                 {
-                    print("stretched")
-                    self.pageNo = self.pageNo+1
-                    self.limit=self.limit + 10
-                    searchViewModel.searchTag = "swift"
-                    searchViewModel.pageNum = self.pageNo
-                    searchViewModel.pageSize = self.limit
-                    tableView.dataSource = searchViewModel
-                    print("here \(searchViewModel.searchTag)")
-                    
-                    if !isDataLoading{
-                        isDataLoading = true
-                        self.pageNo=self.pageNo+1
-                        self.limit=self.limit+10
-                        self.offset=self.limit * self.pageNo
+                    if tag != "" {
+                        self.pageNo = self.pageNo+1
+                        self.limit=self.limit + 10
+                        searchViewModel.searchTag = tag
+                        searchViewModel.pageNum = self.pageNo
+                        searchViewModel.pageSize = self.limit
                         tableView.dataSource = searchViewModel
-                        print("here \(searchViewModel.searchTag)")
-
                     }
                 }
 
@@ -101,10 +91,9 @@ extension SearchViewViewController : UITableViewDelegate {
 
 extension SearchViewViewController : UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
+        tag = searchController.searchBar.text!
+        searchViewModel.searchTag = tag
         
-        if let tag = searchController.searchBar.text {
-            searchViewModel.searchTag = tag
-        }
         
     }
 }

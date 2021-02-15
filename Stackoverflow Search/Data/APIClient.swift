@@ -30,7 +30,7 @@ class APIClient : APIClientProtocol {
         var urlBuilder = URLComponents(string: urlString)
         urlBuilder?.queryItems = [
             URLQueryItem(name: "pagesize", value: String(defaultPageSize)),
-            URLQueryItem(name: "page", value: String(pageNum)),
+            URLQueryItem(name: "page", value: "20"),
             URLQueryItem(name: "sort", value: "activity"),
             URLQueryItem(name: "order", value: "desc"),
             URLQueryItem(name: "tagged", value: tag),
