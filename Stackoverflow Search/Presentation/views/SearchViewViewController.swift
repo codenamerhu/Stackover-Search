@@ -78,22 +78,9 @@ extension SearchViewViewController : UITableViewDelegate {
                     print("stretched")
                     self.pageNo = self.pageNo+1
                     self.limit=self.limit + 10
-                    searchViewModel.searchTag = "swift"
                     searchViewModel.pageNum = self.pageNo
                     searchViewModel.pageSize = self.limit
                     tableView.dataSource = searchViewModel
-                    print("here \(searchViewModel.searchTag)")
-                    
-                    if !isDataLoading{
-                        isDataLoading = true
-                        self.pageNo=self.pageNo+1
-                        self.limit=self.limit+10
-                        self.offset=self.limit * self.pageNo
-                        searchViewModel.searchTag = "swift"
-                        tableView.dataSource = searchViewModel
-                        print("here \(searchViewModel.searchTag)")
-
-                    }
                 }
 
 
