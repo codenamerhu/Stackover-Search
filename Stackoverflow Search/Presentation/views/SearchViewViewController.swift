@@ -11,7 +11,6 @@ class SearchViewViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
 
-    var isDataLoading:Bool=false
     var pageNo:Int=0
     var limit:Int=0
     var offset:Int=0 //pageNo*limit
