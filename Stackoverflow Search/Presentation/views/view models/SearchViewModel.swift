@@ -45,6 +45,11 @@ class SearchViewModel : NSObject {
         }
     }
     
+    func hasMore() -> Bool {
+        
+        return questions.has_more
+    }
+    
 }
 
 extension SearchViewModel : UITableViewDataSource {

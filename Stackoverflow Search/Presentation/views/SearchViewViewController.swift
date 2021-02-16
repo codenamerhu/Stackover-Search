@@ -76,12 +76,16 @@ extension SearchViewViewController : UITableViewDelegate {
                 if ((tableView.contentOffset.y + tableView.frame.size.height) >= tableView.contentSize.height)
                 {
                     if tag != "" {
-                        self.pageNo = self.pageNo+1
-                        self.limit=self.limit + 10
-                        searchViewModel.searchTag = tag
-                        searchViewModel.pageNum = self.pageNo
-                        searchViewModel.pageSize = self.limit
-                        tableView.dataSource = searchViewModel
+                        
+                        if searchViewModel.hasMore() != false {
+                            self.pageNo = self.pageNo+1
+                            self.limit=self.limit + 10
+                            searchViewModel.searchTag = tag
+                            searchViewModel.pageNum = self.pageNo
+                            searchViewModel.pageSize = self.limit
+                            tableView.dataSource = searchViewModel
+                        }
+                        
                     }
                 }
 

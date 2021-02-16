@@ -10,5 +10,6 @@ import Foundation
 struct Questions : Codable {
     
     let items: [Items]?
+    let has_more: Bool
     
 }
