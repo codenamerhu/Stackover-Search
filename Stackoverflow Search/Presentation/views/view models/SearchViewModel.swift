@@ -50,6 +50,14 @@ class SearchViewModel : NSObject {
         return questions.has_more
     }
     
+    
+    
+    func clear() {
+        self.pageNum = 1
+        self.pageSize = 0
+        dataChange?()
+    }
+    
 }
 
 extension SearchViewModel : UITableViewDataSource {

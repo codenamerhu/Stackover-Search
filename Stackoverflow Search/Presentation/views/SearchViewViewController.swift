@@ -95,9 +95,12 @@ extension SearchViewViewController : UITableViewDelegate {
 
 extension SearchViewViewController : UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
+        
+        
+        
         tag = searchController.searchBar.text!
         searchViewModel.searchTag = tag
-        
+        searchViewModel.clear()
         
     }
 }
